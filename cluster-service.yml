@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ipl-service
+  namespace: satyam
+spec:
+  selector:
+    app: ipl
+  ports:
+    - protocol: TCP
+      port: 80 #svc port number and its our wish
+      targetPort: 3000 # container port number and we shouldn't change it
+  type: ClusterIP
+
+
+   #  kubectl apply -f service.yml -n satyam
+   #  kubectl get svc -n satyam
+   #  kubectl describe svc ipl-service -n satyam

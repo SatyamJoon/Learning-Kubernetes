@@ -1,0 +1,46 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: satyam-ipl-ingress
+  namespace: satyam
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ipl-service
+            port:
+              number: 80
+
+#   first installing ingress nginx controller
+#   kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.2/deploy/static/provider/cloud/deploy.yaml
+#   kubectl get ns
+#   kubectl get all -n ingress-nginx
+#   ls
+#   kubectl get ingress -A
+#   ls
+#   cat service.yaml
+#   vi ingress.yaml
+#   ls
+#   cat service.yaml
+#   cat ingress.yaml
+#   kubectl get all -n murali-ns
+#   kubectl get all -n ingress-nginx
+#   ls
+#   kubectl apply -f ingress.yaml
+#   kubectl get ingress -n murali-ns
+
+  # install ingress nginx contoller 
+
+#-->  kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.2/deploy/static/provider/cloud/deploy.yaml
+
+
+# uninstall or delete ingress nginx controller
+
+#-->  kubectl delete -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.2/deploy/static/provider/cloud/deploy.yaml

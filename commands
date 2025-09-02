@@ -1,0 +1,101 @@
+237  kubectl get deployments -A
+  238  kubectl top nodes
+  239  kubectl get deployments -A
+  240  kubectl top nodes
+  241  kubectl get deployments -A
+  242  kubectl get all -n murali-ns
+  243  ls
+  244  cd ..
+  245  ls
+  246  kubectl get pods -A
+  247  kubectl get rs -A
+  248  kubectl get deployments -A
+  249  ls
+  250  kubectl get nodes
+  251  kubectl top nodes
+  252  kubectl top pods
+  253  kubectl top pods -A
+  254  kubectl top pods -n murali-ns
+  255  kubectl get all -n murali-ns
+  256  kubectl get pods -o wide -n murali-ns
+  257  kubectl delete pods --all -n murali-ns
+  258  kubectl get pods -o wide -n murali-ns
+  259  kubectl rollout restart deployment ipl-deployment -n murali-ns
+  260  kubectl get all -n murali-ns
+  261  kubectl delete rs ipl-deployment-58c95864d5 -n murali-ns
+  262  kubectl delete rs ipl-deployment-6db95df674 -n murali-ns
+  263  kubectl delete rs ipl-deployment-9756b958b -n murali-ns
+  264  kubectl get all -n murali-ns
+  265  kubectl describe pod ipl-deployment-9756b958b-spmnx -n murali-ns
+  266  ls
+  267  kubectl get deployment -A
+  268  kubectl delete deployment ipl-deployment -n abdullah
+  269  kubectl get all -n murali-ns
+  270  kubectl get deployment -A
+  271  kubectl delete deployment ipl-deployment -n akash
+  272  kubectl get all -n murali-ns
+  273  kubectl get pods -o wide -n murali-ns
+  274  kubectl delete pods --all -n murali-ns
+  275  kubectl get pods -o wide -n murali-ns
+  276  kubectl top nodes
+  277  kubectl get pods -o wide -n murali-ns
+  278  kubectl delete pods --all -n murali-ns
+  279  kubectl get pods -o wide -n murali-ns
+  280  kubectl get deployment -A
+  281  kubectl delete deployment ipl-deployment -n akshat
+  282  kubectl get pods -o wide -n murali-ns
+  283  kubectl get deployment -A
+  284  kubectl delete deployment ipl-deployment -n arjukumar
+  285  kubectl get pods -o wide -n murali-ns
+  286  kubectl get nodes
+  287  ls
+  288  cd murali/
+  289  ls
+  290  cat deployment.yaml
+  291  kubectl get all -n murali-ns
+  292  vi service.yaml
+  293  ls
+  294  kubectl get svc
+  295  ls
+  296  kubectl apply -f service.yaml
+  297  kubectl get svc -n murali-ns
+  298  kubectl describe svc ipl-service -n murali-ns
+
+
+  
+   30  kubectl apply -f deployment.yaml
+   31  kubectl get all -n murali-ns
+   32  kubectl describe pod ipl-deployment-6db95df674-vwsb5 -n murali-ns
+   33  ls
+   34  kubectl describe deployment ipl-deployment -n murali-ns
+   35  kubectl rollout undo deployment ipl-deployment -n murali-ns
+   36  kubectl get all -n murali-ns
+   37  kubectl describe deployment ipl-deployment -n murali-ns
+   38  ls
+   39  kubectl rollout history deployment ipl-deployment -n murali-ns
+   40  kubectl get all -n murali-ns
+   41  kubectl logs ipl-deployment-58c95864d5-vszjq  -n murali-ns
+   42  ls
+   43  kubectl get all -n murali-ns
+   44  kubectl describe pod ipl-deployment-58c95864d5-vszjq -n murali-ns
+   45  kubectl get all -n murali-ns
+   46  kubectl describe rs ipl-deployment-6db95df674 -n murali-ns
+   47  ls
+   48  kubectl get all -n murali-ns
+   49  kubectl exec -it ipl-deployment-58c95864d5-vszjq -- /bin/bash
+   50  kubectl exec -it ipl-deployment-58c95864d5-vszjq -- /bin/sh
+   51  kubectl get all -n murali-ns
+   52  kubectl exec -it ipl-deployment-58c95864d5-vszjq -- /sh/bin
+   53  kubectl exec -it ipl-deployment-58c95864d5-vszjq -- /bin/bash
+   54  kubectl exec -it ipl-deployment-58c95864d5-vszjq -- /bin/sh
+   55  kubectl exec -it ipl-deployment-58c95864d5-vszjq -n murali-ns -- /bin/bash
+   56  ls
+   57  kubectl get all -n murali-ns
+   58  kubectl delete pod ipl-deployment-58c95864d5-vszjq  -n murali-ns
+   59  kubectl get all -n murali-ns
+   60  kubectl delete rs ipl-deployment-6db95df674 -n murali-ns
+   61  kubectl get all -n murali-ns
+   62  kubectl delete rs ipl-deployment-58c95864d5 -n murali-ns
+   63  kubectl get all -n murali-ns
+   64  kubectl delete deployment ipl-deployment -n murali-ns
+   65  kubectl get all -n murali-ns

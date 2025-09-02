@@ -1,0 +1,24 @@
+apiVersion: V1
+kind: Service
+metadata:
+  name: ipl-svc 
+spec:
+  selector:
+    app: ipl
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
+
+#    Commands
+#   19  kubectl create namespace satyam
+#   21  mkdir satyam-dir
+#   22  cd satyam-dir
+#   23  vi lb.yml
+#   33  vi deployment.yml
+#   34  ls
+#   35  kubectl apply -f deployment.yml -n satyam
+#   38  kubectl apply -f lb.yml -n satyam
+#   44  kubectl get svc -n satyam
+# then copy external ip and paste it in google along with :80

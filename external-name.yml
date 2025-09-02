@@ -1,0 +1,12 @@
+apiVersion: V1
+kind: Service
+metadata:
+  name: ipl-svc 
+spec:
+  selector:
+    app: ipl
+  ports:
+    - protocol: TCP
+      port: 80
+      externalName: flipkart.com
+  type: ExternalName

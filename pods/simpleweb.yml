@@ -1,0 +1,49 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: satyam-pod
+  namespace: satyam
+  labels:
+    app: satyam-nginx
+spec:
+  containers:
+  - name: satyam-nginx
+    image: nginx:latest
+    ports:
+      - containerPort: 80
+
+#    1  kubectl get nodes
+#    2  kubectl get nodes
+#    3  kubectl create namespace Satyam
+#    4  kubectl create namespace satyam
+#    5  kubectl get ns
+#    6  mkdir satyam
+#    7  cd satyam
+#    8  ls
+#    9  vi satyam-pod.yml
+#   10  ls
+#   11  kubectl apply -f satyam-pod.yml
+#   12  ls
+#   13  vi satyam-pod.yml
+#   14  kubectl apply -f satyam-pod.yml
+#   15  vi satyam-pod.yml
+#   16  kubectl apply -f satyam-pod.yml
+#   17  vi satyam-pod.yml
+#   18  kubectl apply -f satyam-pod.yml
+#   19  vi satyam-pod.yml
+#   20  kubectl apply -f satyam-pod.yml -n satyam
+#   21  vi satyam-pod.yml
+#   22  kubectl apply -f satyam-pod.yml -n satyam
+#   23  vi satyam-pod.yml
+#   24  kubectl apply -f satyam-pod.yml -n satyam
+#   25  kubectl apply -f satyam-pod.yml
+#   26  vi satyam-pod.yml
+#   27  kubectl apply -f satyam-pod.yml
+#   28  vi satyam-pod.yml
+#   29  kubectl apply -f satyam-pod.yml
+#   30  kubectl apply -f satyam-pod.yml -n satyam
+#   31  kubectl get pods -o wide -n satyam
+#   32  kubectl describe  pod satyam-pod -n satyam
+#    33  kubectl exec -it satyam-pod -n satyam -- /bin/bash
+#    34  curl localhost
+#    35  kubectl exec -it satyam-pod -n satyam /bin/bash

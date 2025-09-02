@@ -1,0 +1,47 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: satyam-deployment
+  namespace: satyam
+  labels: 
+    app: satyam-nginx-dp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: satyam-nginx-dp
+  template:
+    metadata:
+      labels:
+        app: satyam-nginx-dp    
+    spec:
+      containers:
+        - name: satyam-nginx
+          image: nginx:1.21.3
+          ports:
+          - containerPort: 80
+
+#       kubectl rollout status deployment/satyam-deployment -n satyam
+#   88  kubectl rollout history deployment/satyam-deployment -n satyam
+#   89  kubectl set image deployment/satyam-deployment satyam-nginx=nginx:1.2.5 -n satyam
+#   90  kubectl rollout status deployment/satyam-deployment -n satyam
+#   91  kubectl rollout history deployment/satyam-deployment -n satyam
+#   92  kubectl set image deployment/satyam-deployment satyam-nginx=nginx:1.21.3 -n satyam --record
+#   93  kubectl rollout history deployment/satyam-deployment -n satyam
+#   94  vi satyam-deployment.yml
+#   95  kubectl apply -f satyam-deployment.yml
+#   96  kubectl rollout history deployment/satyam-deployment -n satyam
+#   97  cat satyam-deployment.yml
+#   98  kubectl set image deployment/satyam-deployment satyam-nginx=nginx:2.21.3 -n satyam --record
+#   99  kubectl rollout status deployment/satyam-deployment -n satyam
+#  100  kubectl set image deployment/satyam-deployment satyam-nginx=nginx:2.21.3 -n satyam 
+#  101  kubectl rollout status deployment/satyam-deployment -n satyam
+#  102  vi satyam-deployment.yml
+#  103  cat satyam-deployment.yml
+#  104  vi satyam-deployment.yml
+#  105  cat satyam-deployment.yml
+#  106  kubectl set image deployment/satyam-deployment -n satyam 
+#  107  kubectl apply -f satyam-deployment.yml
+#  108  kubectl set image deployment/satyam-deployment -n satyam 
+#  109  kubectl set image deployment/satyam-deployment satyam-nginx=nginx:alpine -n satyam --record
+#  110  kubectl rollout history deployment/satyam-deployment -n satyam

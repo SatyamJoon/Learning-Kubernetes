@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: satyam-replica
+  namespace: satyam
+  labels: 
+    app: satyam-nginx-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: satyam-nginx-rs
+  template:
+    metadata:
+      labels:
+        app: satyam-nginx-rs    
+    spec:
+      containers:
+        - name: satyam-nginx
+          image: nginx:latest
+          ports:
+          - containerPort: 80
+
+#    kuberctl get pods     
+#    kubectl get pods -n satyam
+#    kubectl delete pod satyam-replica-26g2x -n satyam
+#    kubectl get pods -n satyam
+
+
+

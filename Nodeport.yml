@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ipl-service
+spec:
+  selector:
+    app: ipl
+  ports:
+    - protocol: TCP
+      port: 80 #svc port number and its our wish
+      targetPort: 3000 # container port number and we shouldn't change it
+      nodePort: 30080  # between 30000-32767
+  type: nodePort
+
+  #kubectl apply -f s
