@@ -17,7 +17,12 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv /tmp/eksctl /usr/local/bin
 eksctl version
 
+# for creating cluster
+eksctl create cluster \ --name user1-cluster \ --region us-east-1 \ --zones us-east-1a,us-east-1b,us-east-1c \ --nodegroup-name user2-node-gp \
+--node-type t2.small \ --nodes 4
 
+# Deleting cluster
+eksctl delete cluster --name user1-cluster --region us-east-1
 
 
 
